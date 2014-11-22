@@ -1,3 +1,14 @@
+PRerequisites :
+
+```
+brew install maven
+```
+
+If maven fails to compile, add this line to .bash_profile
+```
+export JAVA_HOME=$(/usr/libexec/java_home)
+```
+
 Run with : 
 
 mvn clean compile exec:java -Dexec.mainClass="test"
