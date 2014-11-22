@@ -1,4 +1,4 @@
-PRerequisites :
+Prerequisites :
 
 ```
 brew install maven
@@ -9,28 +9,36 @@ If maven fails to compile, add this line to .bash_profile
 export JAVA_HOME=$(/usr/libexec/java_home)
 ```
 
-Run with : 
+With Java 1.8
+
+In OS X:
+- https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html
+- http://stackoverflow.com/questions/21964709/how-to-change-default-java-version
+
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_25`
+
+Run with :
 
 mvn clean compile exec:java -Dexec.mainClass="test"
 
 ```
 [INFO] Scanning for projects...
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building test 0.0.1-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ test ---
 [INFO] Deleting /Users/nestor.pina/workspace/intelygenz/apiary-java-language-test/target
-[INFO] 
+[INFO]
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 [INFO] Copying 0 resource
-[INFO] 
+[INFO]
 [INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ test ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /Users/nestor.pina/workspace/intelygenz/apiary-java-language-test/target/classes
-[INFO] 
+[INFO]
 [INFO] --- exec-maven-plugin:1.3.2:java (default-cli) @ test ---
 [WARNING] Warning: killAfter is now deprecated. Do you need it ? Please comment on MEXEC-6.
 status: 200
